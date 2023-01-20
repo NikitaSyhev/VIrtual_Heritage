@@ -4,7 +4,7 @@
 
 
 
-//виртуальное наследование
+//РІРёСЂС‚СѓР°Р»СЊРЅРѕРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
 
 //class Vehicle
 //{
@@ -20,7 +20,7 @@
 //	int _speed;
 //};
 //
-//enum Transmission { // enum перечисляемый тип, как класс, только инты хранит
+//enum Transmission { // enum РїРµСЂРµС‡РёСЃР»В¤РµРјС‹Р№ С‚РёРї, РєР°Рє РєР»Р°СЃСЃ, С‚РѕР»СЊРєРѕ РёРЅС‚С‹ С…СЂР°РЅРёС‚
 //	Auto,
 //	Manual
 //};
@@ -67,11 +67,11 @@
 
 
 
-//виртуальные функции
+//РІРёСЂС‚СѓР°Р»СЊРЅС‹Рµ С„СѓРЅРєС†РёРё
 class A
 {
 public:
-	//static dispatch / early biding ( стиатический выхов, ранняя привязка )
+	//static dispatch / early biding ( СЃС‚РёР°С‚РёС‡РµСЃРєРёР№ РІС‹С…РѕРІ, СЂР°РЅРЅВ¤В¤ РїСЂРёРІВ¤Р·РєР° )
 	void foo() {
 		std::cout << "A:foo()" << std::endl;
 	}
@@ -95,7 +95,7 @@ public:
 class C :public B { //vptr
 public:
 	//vptr
-	void bar() override {   //перегрузка функции, которая уже существует
+	void bar() override {   //РїРµСЂРµРіСЂСѓР·РєР° С„СѓРЅРєС†РёРё, РєРѕС‚РѕСЂР°В¤ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
 		std::cout << "C::bar()" << std::endl;
 	}
 };
@@ -106,18 +106,18 @@ public:
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	//виртуальное наследование
-//виртуальное наследование
+	//РІРёСЂС‚СѓР°Р»СЊРЅРѕРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
+//РІРёСЂС‚СѓР°Р»СЊРЅРѕРµ РЅР°СЃР»РµРґРѕРІР°РЅРёРµ
 	//FlyingCar fc(800, OriginCountry::Russia, Transmission::Auto, FlyingCarMode::Fly);
 
 
 	//std::cout << fc.getSpeed() << std::endl;
 
-	//Vehicle* fc2 = new FlyingCar(800, OriginCountry::Russia, Transmission::Auto, FlyingCarMode::Fly); // магия
+	//Vehicle* fc2 = new FlyingCar(800, OriginCountry::Russia, Transmission::Auto, FlyingCarMode::Fly); // РјР°РіРёВ¤
 
 	//delete fc2;
 
-	//в
+	//РІ
 
 
 	B* b = new C;
